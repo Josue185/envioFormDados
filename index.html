@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resumo de Atendimento</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Formulário de Atendimento</h1>
+
+  <form id="formAtendimento">
+    <label for="nomeAgente">Nome do Agente:</label>
+    <input type="text" id="nomeAgente" name="nomeAgente">
+
+    <label for="aldapAgente">Aldap:</label>
+    <input type="text" id="aldapAgente" name="aldapAgente">
+
+    <label for="numeroCaso">Número do Caso:</label>
+    <input type="text" id="numeroCaso" name="numeroCaso">
+
+    <label for="dataAtendimento">Data do Atendimento:</label>
+    <input type="date" id="dataAtendimento" name="dataAtendimento">
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+      <option value="">Selecione</option>
+      <option value="Aberto">Aberto</option>
+      <option value="Em Andamento">Em Andamento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+
+    <label for="observacao">Observação:</label>
+    <textarea id="observacao" name="observacao" ></textarea>
+
+    <button type="submit">
+      Enviar
+    </button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
