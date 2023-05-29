@@ -15,6 +15,7 @@ const handleSubmit = (event) => {
     const name = document.querySelector('input[name="nomeAgente"]').value;
     const aldap = document.querySelector('input[name="aldapAgente"]').value;
     const numeroCaso = document.querySelector('input[name="numeroCaso"]').value;
+    const Task = document.querySelector('input[name="task"]').value;
     const dataAtendimento = document.querySelector('input[name="dataAtendimento"]').value;
     const status = document.querySelector("#status").value;
     const observacao = document.querySelector("#observacao").value;
@@ -26,7 +27,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({Nome_Agente: name, ALDAP_Agente: aldap, Número_do_Caso: numeroCaso, Data_do_Atendimento: dataAtendimento, status, observacao})
+        body: JSON.stringify({Nome_Agente: name, ALDAP_Agente: aldap, Número_do_Caso: numeroCaso, Task , Data_do_Atendimento: dataAtendimento, status, observacao})
 
     }).then(() => removeLoading());
 }
