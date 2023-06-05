@@ -1,7 +1,7 @@
 const button = document.querySelector('button');
 
 const adicionaLoading = () => {
-    button.innerHTML = '<img src="/loading.png" class="loading"></img>';
+    button.innerHTML = '<img src="loading.png" class="loading"></img>';
 }
 
 const removeLoading = () => {
