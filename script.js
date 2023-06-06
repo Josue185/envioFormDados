@@ -29,15 +29,9 @@ const handleSubmit = (event) => {
         },
         body: JSON.stringify({aldapAgente, issue, screenshoot,Data_do_Atendimento: dataAtendimento, status, observacao})
 
-}).then(() => {
+ }).then(() => {
         removeLoading();
-        // Limpar os campos do formulário
-        document.querySelector('input[name="aldapAgente"]').value = '';
-        document.querySelector("#dataAtendimento").value = '';
-        document.querySelector("#issue").value = '';
-        document.querySelector("#screenshoot").value = '';
-        document.querySelector("#status").value = '';
-        document.querySelector("#observacao").value = '';
+        form.reset(); // Limpa o formulário
     });
 }
 
