@@ -26,7 +26,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({aldap: aldapAgente, issue, screenshoot,Data_do_Atendimento: dataAtendimento, status, observacao})
+        body: JSON.stringify({aldap, issue, screenshoot,Data_do_Atendimento: dataAtendimento, status, observacao})
 
     }).then(() => removeLoading());
 }
