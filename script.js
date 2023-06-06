@@ -12,6 +12,8 @@ const handleSubmit = (event) => {
     event.preventDefault();
     adicionaLoading();
 
+    var inputs ['input[name="aldapAgente"]',"#dataAtendimento","#issue","#screenshoot", "#status", "#observacao"];
+    
     const aldapAgente = document.querySelector('input[name="aldapAgente"]').value;
     const dataAtendimento = document.querySelector("#dataAtendimento").value;
     const issue = document.querySelector("#issue").value;
@@ -31,7 +33,6 @@ const handleSubmit = (event) => {
     }).then(() => removeLoading());
 }
 
-document.querySelector('form').addEventListener('submit',handleSubmit);
-
-
-document.querySelector('form').addEventListener('submit',clear);
+document.querySelector('form').addEventListener('submit',handleSubmit({
+  inputs.clear
+}));
