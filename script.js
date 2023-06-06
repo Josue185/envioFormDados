@@ -12,7 +12,7 @@ const handleSubmit = (event) => {
     event.preventDefault();
     adicionaLoading();
 
-    var inputs = ['input[name="aldapAgente"]',"#dataAtendimento","#issue","#screenshoot", "#status", "#observacao"];
+    var inputs = ['input'];
     
     const aldapAgente = document.querySelector('input[name="aldapAgente"]').value;
     const dataAtendimento = document.querySelector("#dataAtendimento").value;
