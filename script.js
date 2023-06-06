@@ -14,6 +14,7 @@ const handleSubmit = (event) => {
 
     const aldap = document.querySelector('input[name="aldapAgente"]').value;
     const dataAtendimento = document.querySelector("#dataAtendimento").value;
+    const dataAtendimento = document.querySelector("#issue").value;
     const status = document.querySelector("#status").value;
     const observacao = document.querySelector("#observacao").value;
     
