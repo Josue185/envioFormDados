@@ -32,8 +32,4 @@ const handleSubmit = (event) => {
     }).then(() => removeLoading());
 }
 
-var inputs = ['input[name="aldapAgente"]',"#dataAtendimento","#issue","#screenshoot", "#status", "#observacao"];
-
-document.querySelector('form').addEventListener('submit',handleSubmit({
-  inputs.clear
-}));
+document.querySelector('form').addEventListener('submit',handleSubmit);
