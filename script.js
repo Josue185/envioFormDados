@@ -14,7 +14,8 @@ const handleSubmit = (event) => {
 
     const aldap = document.querySelector('input[name="aldapAgente"]').value;
     const dataAtendimento = document.querySelector("#dataAtendimento").value;
-    const dataAtendimento = document.querySelector("#issue").value;
+    const issue = document.querySelector("#issue").value;
+    const screenshoot = document.querySelector("#screenshoot").value;
     const status = document.querySelector("#status").value;
     const observacao = document.querySelector("#observacao").value;
     
@@ -25,7 +26,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ALDAP_Agente: aldapAgente, Data_do_Atendimento: dataAtendimento, status, observacao})
+        body: JSON.stringify({ALDAP_Agente: aldapAgente, issue, screenshoot,Data_do_Atendimento: dataAtendimento, status, observacao})
 
     }).then(() => removeLoading());
 }
