@@ -9,26 +9,26 @@
 
   <form id="formAtendimento">
     <label for="aldapAgente">Aldap:</label>
-    <input type="text" id="aldapAgente" name="aldapAgente" required="required">
+    <input type="text" id="aldapAgente" name="aldapAgente" required>
 
     <label for="dataAtendimento">Date:</label>
-    <input type="date" id="dataAtendimento" name="dataAtendimento">
+    <input type="date" id="dataAtendimento" name="dataAtendimento" required>
     
     <label for="issue">Issue:</label>
     <input type="text" id="issue" name="issue">
     
     <label for="Block screenshot:">Block Screenshoot</label>
-    <input type="text" id="screenshoot" name="screenshoot">
+    <input type="text" id="screenshoot" name="screenshoot" required>
 
     <label for="status">Impact:</label>
-    <select id="status" name="impact">
+    <select id="status" name="impact" required>
       <option value="">Selecione</option>
       <option value="partial">Partial</option>
       <option value="Period:">Period</option>
     </select>
 
     <label for="observacao">Observação:</label>
-    <textarea id="observacao" name="observacao" ></textarea>
+    <textarea id="observacao" name="observacao"></textarea>
 
     <button type="submit">
       Enviar
