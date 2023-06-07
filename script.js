@@ -29,11 +29,11 @@ const handleSubmit = (event) => {
         },
         body: JSON.stringify({aldapAgente, issue, screenshoot, dataAtendimento, status, observacao})
 
- }).then(() => {
-        removeLoading();
-        form.reset(); // Limpa o formulário
-    });
+ }).then(() => removeLoading());
 }
+
+document.querySelector('input[name="aldapAgente"]').value = '';
+document.querySelector("#dataAtendimento").value = '';
 
 
 document.querySelector('form').addEventListener('submit',handleSubmit);
