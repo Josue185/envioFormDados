@@ -29,7 +29,8 @@ const handleSubmit = (event) => {
         },
         body: JSON.stringify({aldapAgente, issue, screenshoot, dataAtendimento, status, observacao})
 
- }).then(() => {
+ })
+  .then(() => {
         removeLoading();
         document.querySelector('input[name="aldapAgente"]').value = '';
         document.querySelector("#dataAtendimento").value = '';
@@ -39,7 +40,6 @@ const handleSubmit = (event) => {
         document.querySelector("#observacao").value = '';
     });
 }
-
 
 document.querySelector('form').addEventListener('submit',handleSubmit);
 
