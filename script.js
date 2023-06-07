@@ -31,6 +31,11 @@ const handleSubmit = (event) => {
 
  }).then(() => {
         document.querySelector('input[name="aldapAgente"]').value = '';
+        document.querySelector("#dataAtendimento").value = '';
+        document.querySelector("#issue").value = '';
+        document.querySelector("#screenshoot").value = '';
+        document.querySelector("#status").value = '';
+        document.querySelector("#observacao").value = '';
     });
 }
 
