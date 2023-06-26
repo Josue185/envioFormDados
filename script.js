@@ -12,7 +12,6 @@ const handleSubmit = (event) => {
     event.preventDefault();
     adicionaLoading();
 
-    
     const Agente = document.querySelector("#Agente").value;
     const LDAP = document.querySelector("#LDAP").value;
     const cognizantID = document.querySelector("#cogId").value;
@@ -28,31 +27,24 @@ const handleSubmit = (event) => {
     const year = document.querySelector("#year").value;
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
-
-
-
     
-
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({Agente: "Agente", LDAP: "LDAP", cognizantID:"Cognizant ID", tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
-
- })
-  .then(() => {
-        removeLoading();
-        document.querySelector("#Agente").value = '';
-        document.querySelector("#LDAP").value = '';
-        document.querySelector("#issue").value = '';
-        document.querySelector("#screenshoot").value = '';
-        document.querySelector("#status").value = '';
-        document.querySelector("#observacao").value = '';
-    });
+        body: JSON.stringify({ Agente, LDAP, cognizantID: "Cognizant ID", tL: "Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn: "Date of Return", totalDay: "Total Day", month: "Month", year: "Year", comments: "Comments", screenshoot: "SS do bloqueio no cases" })
+    })
+        .then(() => {
+            removeLoading();
+            document.querySelector("#Agente").value = '';
+            document.querySelector("#dataAtendimento").value = '';
+            document.querySelector("#issue").value = '';
+            document.querySelector("#screenshoot").value = '';
+            document.querySelector("#status").value = '';
+            document.querySelector("#observacao").value = '';
+        });
 }
 
-document.querySelector('form').addEventListener('submit',handleSubmit);
-
-
+document.querySelector('form').addEventListener('submit', handleSubmit);
