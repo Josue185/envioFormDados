@@ -16,8 +16,8 @@ const handleSubmit = (event) => {
     const LDAP = document.querySelector("#LDAP").value;
     const cognizantID = document.querySelector("#cogId").value;
     const tL = document.querySelector("#teamLeader").value;
-    const dataOfAbstance = document.querySelector("#dataOfAbsance").value;
-    const dataOfReturn = document.querySelector("#dateOfReturn").value;
+    const dataOfAbstance = new Date(document.querySelector("#dataOfAbsance").value);
+    const dataOfReturn = new Date(document.querySelector("#dateOfReturn").value);
     const totalDay = document.querySelector("#totalDay").value;
     const bussinesDay = document.querySelector("#bussinesDay").value;
     const reason = document.querySelector("#reason").value;
