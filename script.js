@@ -30,15 +30,7 @@ const handleSubmit = (event) => {
     const screenshoot = document.querySelector("#screenshoot").value;
 
 
-  const columnTitles = {
-  Agente: "Nome do Agente",
-  LDAP: "ID LDAP",
-  cognizantID: "Cognizant ID",
-  screenshoot: "Screenshot",
-  dataAtendimento: "Data de Atendimento",
-  status: "Status",
-  observacao: "Observação",
-};
+
     
 
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
@@ -47,7 +39,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({columnTitles.Agente, columnTitles.LDAP, columnTitles.cognizantID, tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
+        body: JSON.stringify({Agente, LDAP, cognizantID, tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
 
  })
   .then(() => {
