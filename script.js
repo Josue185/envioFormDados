@@ -25,7 +25,7 @@ const handleSubmit = (event) => {
     const type = document.querySelector("#type").value;
     const documentation = document.querySelector("#documentation").value;
     const month = document.querySelector("#month").value;
-    const year = document.querySelector("#documentation").value;
+    const year = document.querySelector("#year").value;
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
     
