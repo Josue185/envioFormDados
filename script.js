@@ -39,7 +39,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({Agente, LDAP, cognizantID, tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
+        body: JSON.stringify({Agente: "Agente", LDAP: "LDAP", cognizantID:"Cognizant ID", tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
 
  })
   .then(() => {
