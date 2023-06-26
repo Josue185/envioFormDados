@@ -14,7 +14,7 @@ const handleSubmit = (event) => {
 
     
     const Agente = document.querySelector("#Agente").value;
-    const ldap = document.querySelector("#LDAP").value;
+    const LDAP = document.querySelector("#LDAP").value;
     const dataAtendimento = document.querySelector("#dataAtendimento").value;
     const issue = document.querySelector("#issue").value;
     const screenshoot = document.querySelector("#screenshoot").value;
@@ -28,7 +28,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({Agente, issue, screenshoot, dataAtendimento, status, observacao})
+        body: JSON.stringify({Agente, LDAP, issue, screenshoot, dataAtendimento, status, observacao})
 
  })
   .then(() => {
