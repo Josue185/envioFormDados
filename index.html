@@ -8,27 +8,60 @@
   <h1>Controle dos Pedidos <br> de Ajuda</h1>
 
   <form id="formAtendimento">
-    <label for="aldapAgente">Aldap:</label>
-    <input type="text" id="aldapAgente" name="aldapAgente" required>
+    <label for="Agente">Agente:</label>
+    <input type="text" id="Agente" name="Agente" required>
 
-    <label for="dataAtendimento">Date:</label>
-    <input type="date" id="dataAtendimento" name="dataAtendimento" required>
-    
-    <label for="issue">Issue:</label>
-    <input type="text" id="issue" name="issue">
-    
-    <label for="Block screenshot:">Block Screenshoot</label>
+    <label for="LDAP">LDAP:</label>
+    <input type="text" id="LDAP" name="LDAP" required>
+
+     <label for="cognizantId">Cognizant ID:</label>
+    <input type="text" id="cogId" name="cogId" required>
+
+    <label for="teamLeader">Team Leader:</label>
+    <input type="text" id="teamLeader" name="TeamLeader" required>
+
+    <label for="dataOfAbsance">Date of Absance:</label>
+    <input type="date" id="dataOfAbsance" name="dataOfAbsance" required>
+
+     <label for="dataOfReturn">Date of Return:</label>
+    <input type="date" id="dateOfReturn" name="dateOfReturn" required>
+
+    <label for="totalDay">Total Day</label>
+    <input type="text" id="totalDay" name="TotalDay" required>
+
+    <label for="bussinesDay">Bussines Day</label>
+    <input type="text" id="bussinesDay" name="bussinesDay" required>
+
+    <label for="reason">Reason</label>
+    <input type="text" id="reason" name="reason" required>
+
+    <label for="type">Type</label>
+    <input type="text" id="type" name="type" required>
+
+    <label for="documentation">Documentation</label>
+    <input type="text" id="documentation" name="documentation" required>
+
+    <label for="month">Month</label>
+    <input type="text" id="month" name="month" required>
+
+    <label for="Year">Year</label>
+    <input type="text" id="documentation" name="documentation" required>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments"></textarea>
+        
+    <label for="screenshoot">SS do bloqueio no cases</label>
     <input type="text" id="screenshoot" name="screenshoot" required>
 
+    <!--
     <label for="status">Impact:</label>
     <select id="status" name="impact" required>
       <option value="">Selecione</option>
       <option value="partial">Partial</option>
       <option value="Period:">Period</option>
     </select>
-
-    <label for="observacao">Observação:</label>
-    <textarea id="observacao" name="observacao"></textarea>
+  !-->
+    
 
     <button type="submit">
       Enviar
