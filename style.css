@@ -5,9 +5,10 @@ body {
   }
   
   h1 {
-    font-size: 18px;
+    font-size: 22px;
     color: #333;
     text-align: center;
+    margin-bottom:10px;
   }
   
   form {
