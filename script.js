@@ -28,6 +28,17 @@ const handleSubmit = (event) => {
     const year = document.querySelector("#year").value;
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
+
+
+  const columnTitles = {
+  Agente: "Nome do Agente",
+  LDAP: "ID LDAP",
+  cognizantID: "Cognizant ID",
+  screenshoot: "Screenshot",
+  dataAtendimento: "Data de Atendimento",
+  status: "Status",
+  observacao: "Observação",
+};
     
 
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
@@ -36,13 +47,13 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({Agente, LDAP, cognizantID: "Cognizant ID", tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
+        body: JSON.stringify({columnTitles.Agente, LDAP, cognizantID: "Cognizant ID", tL:"Team Leader", dataOfAbstance: "Date of Abstance", dataOfReturn:"Date of Return", totalDay:"Total Day", month:"Month", year:"Year", comments:"Comments", screenshoot:"SS do bloqueio no cases"})
 
  })
   .then(() => {
         removeLoading();
         document.querySelector("#Agente").value = '';
-        document.querySelector("#dataAtendimento").value = '';
+        document.querySelector("#LDAP").value = '';
         document.querySelector("#issue").value = '';
         document.querySelector("#screenshoot").value = '';
         document.querySelector("#status").value = '';
