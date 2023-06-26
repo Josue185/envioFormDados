@@ -27,6 +27,11 @@ const handleSubmit = (event) => {
     const year = document.querySelector("#year").value;
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
+
+    //Criando a Diferença entre as datas e adcionando ao Input
+    const diffTime = Math.abs(dataOfReturn - dataOfAbstance);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    document.querySelector("#totalDay").value = diffDays;
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
