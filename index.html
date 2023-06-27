@@ -4,12 +4,9 @@
   <title>Formulário para controle de Ajuda ao TLs</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   
-  <!--<script>
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Tudo pronto");
-    
-   setInterval(function(){
-    data1 = document.querySelectorAll('[type="date"]')[0].value;
+  <script>
+function dataConta(data1, data2) {
+  data1 = document.querySelectorAll('[type="date"]')[0].value;
   data2 = document.querySelectorAll('[type="date"]')[1].value;
 
   var date1 = new Date(data1);
@@ -18,12 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var diffTime = Math.abs(date2 - date1);
   var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  document.querySelector('#totalDay').value = diffDays  
   return diffDays;
-},1000)
-   
-});
-</script> -->
+}
+
+ if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
+        dataConta();
+        var diferencaDias = dataConta();
+        document.querySelector('#totalDay').value = diferencaDias
+    }
+</script>
   
 </head>
 <body>
