@@ -5,9 +5,9 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   
   <script>
-function dataConta(data1, data2) {
-  data1 = document.querySelectorAll('[type="date"]')[0].value;
-  data2 = document.querySelectorAll('[type="date"]')[1].value;
+function dataConta() {
+  var data1 = document.querySelector('#data1').value;
+  var data2 = document.querySelector('#data2').value;
 
   var date1 = new Date(data1);
   var date2 = new Date(data2);
@@ -16,14 +16,18 @@ function dataConta(data1, data2) {
   var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   return diffDays;
+}
 
-  if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
-        dataConta();
-        var diferencaDias = dataConta();
-        document.querySelector('#totalDay').value = diferencaDias
-    }
+function atualizarResultado() {
+  var diferencaDias = dataConta();
+  document.querySelector('#totalDay').value = diferencaDias;
+}
 
- 
+var camposData = document.querySelectorAll('[type="date"]');
+camposData.forEach(function (campo) {
+  campo.addEventListener('change', atualizarResultado);
+});
+
 </script>
   
 </head>
