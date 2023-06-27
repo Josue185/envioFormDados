@@ -16,13 +16,14 @@ function dataConta(data1, data2) {
   var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   return diffDays;
-}
 
- if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
+  if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
         dataConta();
         var diferencaDias = dataConta();
         document.querySelector('#totalDay').value = diferencaDias
     }
+
+ 
 </script>
   
 </head>
