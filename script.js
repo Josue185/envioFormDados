@@ -16,8 +16,8 @@ const handleSubmit = (event) => {
     const LDAP = document.querySelector("#LDAP").value;
     const cognizantID = document.querySelector("#cogId").value;
     const tL = document.querySelector("#teamLeader").value;
-    const dataOfAbstance = new Date(document.querySelector("#dataOfAbsance").value);
-    const dataOfReturn = new Date(document.querySelector("#dateOfReturn").value);
+    const dataOfAbstance = document.querySelector("#dataOfAbsance").value;
+    const dataOfReturn = document.querySelector("#dateOfReturn").value;
     const totalDay = document.querySelector("#totalDay").value;
     const bussinesDay = document.querySelector("#bussinesDay").value;
     const reason = document.querySelector("#reason").value;
@@ -28,10 +28,30 @@ const handleSubmit = (event) => {
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
 
-    //Criando a Diferença entre as datas e adcionando ao Input
-    const diffTime = Math.abs(dataOfReturn - dataOfAbstance);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    document.querySelector("#totalDay").value = diffDays;
+    function dataConta(data1, data2) {
+  data1 = document.querySelectorAll('[type="date"]')[0].value;
+  data2 = document.querySelectorAll('[type="date"]')[1].value;
+
+  var date1 = new Date(data1);
+  var date2 = new Date(data2);
+
+  var diffTime = Math.abs(date2 - date1);
+  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    
+  return diffDays;
+}
+
+(function () {
+    
+    if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
+    dataConta();
+    var diferencaDias = dataConta();
+    document.querySelector('#totalDay').value = diferencaDias
+}
+    
+})();
+
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
