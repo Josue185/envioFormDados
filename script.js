@@ -52,6 +52,8 @@ const handleSubmit = (event) => {
     
 })();
 
+dataConta();
+
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
