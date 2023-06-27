@@ -50,7 +50,7 @@ setTimeout(function(){
         document.querySelector('#totalDay').value = diferencaDias
     }
 
-})
+},1000)
 
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
