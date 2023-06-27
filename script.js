@@ -38,7 +38,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ Agente, LDAP, cognizantID: "Cognizant ID", tL, dataOfAbstance, dataOfReturn, totalDay, bussinesDay, month, year, comments, screenshoot})
+        body: JSON.stringify({ Agente, LDAP, cognizantID, tL, dataOfAbstance, dataOfReturn, totalDay, bussinesDay, month, year, comments, screenshoot})
     })
         .then(() => {
             removeLoading();
@@ -48,6 +48,7 @@ const handleSubmit = (event) => {
             document.querySelector("#teamLeader").value = '';
             document.querySelector("#dataOfAbsance").value = '';
             document.querySelector("#dateOfReturn").value = '';
+            document.querySelector("#totalDay").value = '';
             
         });
 }
