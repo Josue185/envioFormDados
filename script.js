@@ -42,16 +42,12 @@ const handleSubmit = (event) => {
   return diffDays;
 }
 
-setTimeout(function(){
-    
-    if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
+
+if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
         dataConta();
         var diferencaDias = dataConta();
         document.querySelector('#totalDay').value = diferencaDias
     }
-
-},1000)
-
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
