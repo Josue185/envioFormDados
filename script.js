@@ -28,30 +28,22 @@ const handleSubmit = (event) => {
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
 
- function dataConta() {
-    var data1 = document.querySelectorAll('[type="date"]')[0].value;
-    var data2 = document.querySelectorAll('[type="date"]')[1].value;
-  
-    var date1 = new Date(data1);
-    var date2 = new Date(data2);
-  
-    var diffTime = Math.abs(date2 - date1);
-    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
-    return diffDays;
-  }
-  
-  
-  function atualizarResultado() {
-    var diferencaDias = dataConta();
-    document.querySelector('#totalDay').value = diferencaDias;
-  }
-  
-  
-  var camposData = document.querySelectorAll('[type="date"]');
-  camposData.forEach(function (campo) {
-    campo.addEventListener('change', atualizarResultado);
-  });
+    function dataConta(data1, data2) {
+  data1 = document.querySelectorAll('[type="date"]')[0].value;
+  data2 = document.querySelectorAll('[type="date"]')[1].value;
+
+  var date1 = new Date(data1);
+  var date2 = new Date(data2);
+
+  var diffTime = Math.abs(date2 - date1);
+  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  return diffDays;
+}
+
+var diferencaDias = dataConta();
+console.log(diferencaDias);
+    
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
