@@ -43,11 +43,14 @@ const handleSubmit = (event) => {
 }
 
 
-if (document.querySelectorAll('[type="date"]')[0].value != '' && document.querySelectorAll('[type="date"]')[1].value != ''){
-        dataConta();
-        var diferencaDias = dataConta();
-        document.querySelector('#totalDay').value = diferencaDias
-    }
+setInterval(function(){
+
+    dataConta();
+    var diferencaDias = dataConta();
+    document.querySelector('#totalDay').value = diferencaDias
+
+},1000)
+
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
         method: 'post',
