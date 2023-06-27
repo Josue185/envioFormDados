@@ -28,8 +28,8 @@ const handleSubmit = (event) => {
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
 
-    function dataConta(data1, data2) {
-  data1 = document.querySelectorAll('[type="date"]')[0].value;
+    setInterval(function(){
+    data1 = document.querySelectorAll('[type="date"]')[0].value;
   data2 = document.querySelectorAll('[type="date"]')[1].value;
 
   var date1 = new Date(data1);
@@ -38,11 +38,9 @@ const handleSubmit = (event) => {
   var diffTime = Math.abs(date2 - date1);
   var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+  document.querySelector('#totalDay').value = diffDays  
   return diffDays;
-}
-
-var diferencaDias = dataConta();
-console.log(diferencaDias);
+},1000)
     
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
