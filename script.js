@@ -55,12 +55,12 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ Agente, LDAP, cognizantID: "Cognizant ID", tL, dataOfAbstance, dataOfReturn: "Date of Return", totalDay: "Total Day", month: "Month", year: "Year", comments: "Comments", screenshoot: "SS do bloqueio no cases" })
+        body: JSON.stringify({ Agente, LDAP, cognizantID: "Cognizant ID", tL, dataOfAbstance, dataOfReturn, totalDay, month, year, comments, screenshoot})
     })
         .then(() => {
             removeLoading();
             document.querySelector("#Agente").value = '';
-            document.querySelector("#dataAtendimento").value = '';
+            document.querySelector("#LDAP").value = '';
             document.querySelector("#issue").value = '';
             document.querySelector("#screenshoot").value = '';
             document.querySelector("#status").value = '';
