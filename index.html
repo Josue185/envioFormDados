@@ -4,32 +4,6 @@
   <title>Formulário para controle de Ajuda ao TLs</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   
-  <script>
-function dataConta() {
-  var data1 = document.querySelector('#data1').value;
-  var data2 = document.querySelector('#data2').value;
-
-  var date1 = new Date(data1);
-  var date2 = new Date(data2);
-
-  var diffTime = Math.abs(date2 - date1);
-  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  return diffDays;
-}
-
-function atualizarResultado() {
-  var diferencaDias = dataConta();
-  document.querySelector('#totalDay').value = diferencaDias;
-}
-
-var camposData = document.querySelectorAll('[type="date"]');
-camposData.forEach(function (campo) {
-  campo.addEventListener('change', atualizarResultado);
-});
-
-</script>
-  
 </head>
 <body>
   <h1>Controle dos Pedidos de Ajuda</h1>
