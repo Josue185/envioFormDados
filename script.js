@@ -28,19 +28,7 @@ const handleSubmit = (event) => {
     const comments = document.querySelector("#comments").value;
     const screenshoot = document.querySelector("#screenshoot").value;
 
-    setInterval(function(){
-    data1 = document.querySelectorAll('[type="date"]')[0].value;
-  data2 = document.querySelectorAll('[type="date"]')[1].value;
 
-  var date1 = new Date(data1);
-  var date2 = new Date(data2);
-
-  var diffTime = Math.abs(date2 - date1);
-  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  document.querySelector('#totalDay').value = diffDays  
-  return diffDays;
-},1000)
     
     
     fetch('https://api.sheetmonkey.io/form/jzi1PQfx9zyXR7TjiMHLzN', {
